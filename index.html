@@ -7,29 +7,26 @@
     <link rel="stylesheet" href="style.css">
     <title>Woman on a rope</title>
 </head>
-<body>
+<body id="top">
 
     <div class="top-section">
         <nav class="main-nav">
             <figure class="logo">
-              Skyloft
+              <a href="#top">Skyloft</a> 
             </figure>
             <ul class="nav-links">
-                <li class="nav-link"><a href="#">Angebote</a></li>
-                <li class="nav-link"><a href="#">Touren</a></li>
-                <li class="nav-link"><a href="#">Kontakt</a></li>
-                <li class="nav-link"><a href="#">Preise & Zeiten</a></li>
-                <li class="btn__termine"><a href="#">Termin buchen</a></li>
+                <li class="nav-link"><a href="#touren">Touren</a></li>
+                <li class="nav-link"><a href="#angebote">Angebote</a></li>
+                <li class="nav-link"><a href="#preise&zeiten">Preise & Zeiten</a></li>
+                <li class="nav-link"><a href="#kontakt">Kontakt</a></li>
+                <li class="btn__termine"><a href="#termin-buchen">Termin buchen</a></li>
             </ul>
         </nav>
     </div>
 
     <div class="wrapper">
 
-        <h1 class="heading__main" >Willkommen
-            <span class="heading__main--sub-1">bei</span>
-            <span class="heading__main--sub-2">Skyloft</span>
-        </h1>
+        <h1 class="heading__main"><span>SKY</span><span>LOFT</span></h1>
 
         <svg version="1.1" id="obj" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 2500 384" style="enable-background:new 0 0 2500 384;" xml:space="preserve">
@@ -49,6 +46,10 @@
             <img class="woman" id="woman" src="images/Woman-alleine.png" alt="">
         </div>
 
+        <a href="#touren">
+            <svg id="chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.49 71.49"><defs><style>.cls-1,.cls-2{stroke-miterlimit:10;stroke-width:3px;}.cls-1{stroke-linecap:round;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M18.11,28.77,34.92,45.59a1.18,1.18,0,0,0,1.65,0L53.39,28.77"/><circle class="cls-2" cx="35.75" cy="35.75" r="34.25"/></g></g></svg>
+        </a>
+        
        
     </div>
 
@@ -61,10 +62,23 @@
     </div>
 
 
-    <section class="next">
-        next section
+    <section id="touren" class="touren-section">
+        Touren
     </section>
 
+    <!-- <section id="angebote" class="touren-section">
+        Angebote
+    </section>
+
+    <section id="preise&zeiten" class="touren-section">
+        Preise & Zeiten
+    </section>
+
+    <section id="kontakt" class="touren-section">
+        Kontakt
+    </section> -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
 </html>
