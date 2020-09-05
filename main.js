@@ -1,3 +1,5 @@
+// Variables
+
 const leftTree = document.querySelector('#left-tree');
 const rightTree = document.querySelector('#right-tree');
 const woman = document.querySelector('#woman');
@@ -5,6 +7,9 @@ const woman = document.querySelector('#woman');
 const mainNav = document.querySelector(".main-nav");
 const navLink = document.querySelectorAll(".nav-link");
 
+const treeTops = document.querySelector("#tree-tops");
+
+// Scroll Events
 
 window.addEventListener("scroll", () => {
     let scrolled = window.pageYOffset;
@@ -15,6 +20,12 @@ window.addEventListener("scroll", () => {
 
     woman.style.top = `${scrolled}px`; 
     woman.style.left = `${(scrolled * 4)}px`;
+
+    if(scrolled > 50) {
+        treeTops.style.opacity = "1";
+    } else {
+        treeTops.style.opacity = "0";
+    }
 
     navLink.forEach(link => {
         (scrolled > 180) ? link.classList.add("active") : link.classList.remove("active");
