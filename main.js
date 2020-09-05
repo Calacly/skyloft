@@ -1,5 +1,25 @@
-// Variables
+// Using an arrow function here will not work - look into this further!
+$("body a").on("click", function(e) {
+    if(this.hash !== "") {
+        e.preventDefault();
 
+        const hash = this.hash;
+        let duration;
+
+        if(hash === "#touren" || hash === "#top") {
+            duration = 2500;
+        } else {
+            duration = 800;
+        }
+
+
+        $("html, body").animate({
+            scrollTop: $(hash).offset().top
+        }, duration);
+    }
+})
+
+// Variables
 const leftTree = document.querySelector('#left-tree');
 const rightTree = document.querySelector('#right-tree');
 const woman = document.querySelector('#woman');

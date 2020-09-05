@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 :root {
     --clr-light: #fff;
     --clr-dark: #333;
@@ -21,26 +22,79 @@
    height: 2000px;
 }
 
-.heading__main {
+#chevron-down {
     position: fixed;
-    top: 54vh;
-    left: 0;
-    text-align: center;
-    font-family: roboto;
-    font-size: 3rem;
-    text-transform: uppercase;
-    color: var(--clr-light);
-    line-height: .8;
-    width: 100%;
-    text-align: center;
-    /* z-index: 50000; */
+    width: 50px;
+    height: auto;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    fill:none;
+    stroke:#fff;
+    stroke-width:1px;
+    cursor: pointer;
+    z-index: 1;
 }
 
-.heading__main--sub-2{
-    display: block;
+
+
+
+
+
+.heading__main {
+    position: fixed;
+    top: 60vh;
+    text-align: center;
+    font-family: roboto;
+    font-size: 12rem;
+    font-size: clamp(4rem, 20vw, 14rem);
     color: var(--clr-blue);
-    font-size: 10rem;
+    line-height: .9;
+    letter-spacing: 10px;
+    width: 100%;
 }
+
+.heading__main span:nth-child(1) {
+    display: inline-block;
+    animation: fromRight 1.6s ease;
+}
+.heading__main span:nth-child(2) {
+    display: inline-block;
+    animation: fromLeft 1.6s ease;
+}
+
+
+@keyframes fromRight {
+    0% {
+      opacity: 0;
+      transform: translateX(400px);
+    } 
+    90% {
+        transform: translateX(-20px);
+    }
+    100% 
+    {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes fromLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-400px);
+    } 
+    90% {
+        transform: translateX(20px);
+    }
+    100% 
+    {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+
+
 
 .hero {
     display: grid;
@@ -105,6 +159,11 @@
 .logo {
     grid-area: logo;
     font-size: 2rem;
+    color: var(--clr-dark);
+}
+.logo a {
+    text-decoration: none;
+    color: blue;
 }
 
 .nav-links {
@@ -191,16 +250,16 @@
     }
 }
 
-.next {
+.touren-section {
     position: absolute;
     top: 105%;
-    height: 100vh;
+    height: 200vh;
     width: 100%;
     background: var(--clr-light);
-    z-index: 2000;
+    z-index: 2;
 }
 
-.next::before {
+.touren-section::before {
     content: "";
     position: absolute;
     width: 100%;
