@@ -7,6 +7,7 @@
 :root {
     --clr-light: #fff;
     --clr-dark: #333;
+    --clr-blue: #6C94C9;
 }
 
 .top-section {
@@ -22,13 +23,23 @@
 
 .heading__main {
     position: fixed;
-    top: 45vh;
-    left: 30vw;
+    top: 54vh;
+    left: 0;
     text-align: center;
+    font-family: roboto;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--clr-light);
+    line-height: .8;
+    width: 100%;
+    text-align: center;
+    /* z-index: 50000; */
 }
 
-.heading__main--sub-1, .heading__main--sub-2 {
+.heading__main--sub-2{
     display: block;
+    color: var(--clr-blue);
+    font-size: 10rem;
 }
 
 .hero {
@@ -38,9 +49,7 @@
     top: 0;
     height: 60vh;
     width: 100%;
-    /* background: linear-gradient(to top, #6DD5FA, #2980B9); */
-    z-index: 1;
-    
+    z-index: 1;   
 }
 
 
@@ -74,30 +83,7 @@
 }
 
 
-
-.tree-tops {
-    position: absolute;
-    width: 100%;
-    height: 60vh;
-    top: 850px;
-    background: black;
-    z-index: 10;
-    opacity: 0;
-    transition: opacity .5s ease-in-out;
-}
-
-.tree-tops::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 500px;
-    top: -250px;
-    /* background: linear-gradient(to top, var(--clr-light), transparent); */
-    background: url(images/Tree-tops-transparent-1800-green.png);
-    z-index: 11;
-   
-}
-
+ 
 
 
 .main-nav {
@@ -108,6 +94,7 @@
     top: 0;
     background: rgba(255,255,255,0);
     transition: all 1s ease;
+    z-index: 5000;
 }
 
 .main-nav.active {
@@ -129,6 +116,17 @@
 
 .nav-link {
     position: relative;
+}
+
+.btn__termine a {
+    text-decoration: none;
+    font-family: 'Chewy', cursive;
+    font-size: 1.3rem;
+    color: var(--clr-light);
+    padding: .7rem 1.9rem;
+    transform: translateY(-.7rem);
+    background: blue;
+    cursor: pointer;
 }
 
 .nav-link a {
@@ -158,7 +156,7 @@
     top: 0;
     left: 0;
     z-index: -2;
-
+    
     position: fixed;
     height: 60vh;
    
@@ -168,19 +166,49 @@
     height: 40vh;
 }
 
+.clouds {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.clouds img {
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    animation: cloudy calc(8s * var(--i)) linear infinite;
+}
+
+@keyframes cloudy {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
 
 .next {
     position: absolute;
-    top: calc(850px + 60vh);
+    top: 105%;
     height: 100vh;
     width: 100%;
-    background: aliceblue;
+    background: var(--clr-light);
     z-index: 2000;
 }
 
-#layer_2 {
-    width: 100%;
+.next::before {
+    content: "";
     position: absolute;
-    z-index: 10000;
-    fill: red;
+    width: 100%;
+    height: 22px;
+    background:linear-gradient(to top, var(--clr-light), transparent);
+    top: -20px;
+   
+
 }
+
+
