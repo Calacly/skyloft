@@ -11,16 +11,27 @@
     --clr-blue: #6C94C9;
 }
 
+.top-anchor {
+    visibility: hidden;
+    position: relative;
+    top: -10vh;
+}
+
+.buffer {
+    width: 100%;
+    height: calc(10vh + 20px);
+    background: red;
+}
+
 .top-section {
     position: fixed;
     height: 10vh;
     width: 100%;
     z-index: 1000;
+    
 }
 
-.wrapper {
-   height: 2000px;
-}
+
 
 #chevron-down {
     position: fixed;
@@ -156,7 +167,8 @@
     display: grid;
     grid-template-areas: "logo links";
     padding: 30px;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     background: rgba(255,255,255,0);
     transition: all 1s ease;
@@ -225,19 +237,17 @@
     color: var(--clr-dark);
 }
 
-#obj {
-    
+#sky-zipline {
     position: absolute;
     top: 0;
     left: 0;
     z-index: -2;
     
     position: fixed;
-    height: 60vh;
-   
+    height: 60vh; 
 }
 
-#obj #line {
+#sky-zipline #line {
     height: 40vh;
 }
 
@@ -266,24 +276,52 @@
     }
 }
 
-.start-section {
-    position: absolute;
-    top: 105%;
-    height: 200vh;
-    width: 100%;
-    background: var(--clr-light);
+main.wrapper {
+    position: relative;
+    top: 100vh;
     z-index: 2;
 }
 
-.start-section::before {
+main.wrapper::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 22px;
     background:linear-gradient(to top, var(--clr-light), transparent);
     top: -20px;
-   
-
 }
 
+.start-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: var(--clr-light);
+    z-index: 2;
+    margin-top: 10vh;
+}
+
+
+.angebote-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: var(--clr-light);
+    z-index: 2;
+}
+
+.touren-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: var(--clr-light);
+    z-index: 2;
+}
+
+.preise-zeiten-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: var(--clr-light);
+    z-index: 2;
+}
 
