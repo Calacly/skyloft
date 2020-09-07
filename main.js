@@ -1,4 +1,5 @@
-// Using an arrow function here will not work - look into this further!
+//! Problem with reloading the page - page doesn't scroll back to the top on reload.
+
 $("body a").on("click", function(e) {
     if(this.hash !== "") {
         e.preventDefault();
@@ -64,3 +65,4 @@ window.addEventListener("scroll", () => {
 
  
 })
+
