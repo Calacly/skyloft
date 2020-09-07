@@ -6,7 +6,7 @@ $("body a").on("click", function(e) {
         const hash = this.hash;
         let duration;
 
-        if(hash === "#touren" || hash === "#top") {
+        if(hash === "#start" || hash === "#top") {
             duration = 2500;
         } else {
             duration = 800;
@@ -31,11 +31,24 @@ const navLink = document.querySelectorAll(".nav-link");
 
 // Scroll Events
 
+
+
 window.addEventListener("scroll", () => {
     let scrolled = window.pageYOffset;
     
     leftTree.style.left = `-${scrolled * .7}px`;
     rightTree.style.right = `${(scrolled * .10) -100}px`;
+    
+    // if(scrolled > 170) {
+    //         let treeHeight = leftTree.offsetHeight;
+            
+    //         // console.log(treeHeight + (Math.ceil(scrolled / 100)));
+
+    //         leftTree.style.height = `${treeHeight + (Math.ceil(scrolled / 100))}px`;
+    //         console.log(treeHeight);
+    // } else {
+    //     leftTree.style.height = "100%";
+    // }
    
 
     woman.style.top = `${scrolled}px`; 
