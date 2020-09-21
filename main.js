@@ -1,5 +1,7 @@
 //! Problem with reloading the page - page doesn't scroll back to the top on reload.
 
+
+
 $("body a").on("click", function(e) {
     if(this.hash !== "") {
         e.preventDefault();
@@ -7,7 +9,7 @@ $("body a").on("click", function(e) {
         const hash = this.hash;
         let duration;
 
-        if(hash === "#start" || hash === "#top") {
+        if(hash === "#start"  && window.pageYOffset < 400 || hash === "#top") {
             duration = 2500;
         } else {
             duration = 800;
@@ -31,7 +33,7 @@ const navLink = document.querySelectorAll(".nav-link");
 
 
 // Scroll Events
-
+const rellax = new Rellax('.rellax');
 
 
 window.addEventListener("scroll", () => {
@@ -40,17 +42,6 @@ window.addEventListener("scroll", () => {
     leftTree.style.left = `-${scrolled * .7}px`;
     rightTree.style.right = `${(scrolled * .10) -100}px`;
     
-    // if(scrolled > 170) {
-    //         let treeHeight = leftTree.offsetHeight;
-            
-    //         // console.log(treeHeight + (Math.ceil(scrolled / 100)));
-
-    //         leftTree.style.height = `${treeHeight + (Math.ceil(scrolled / 100))}px`;
-    //         console.log(treeHeight);
-    // } else {
-    //     leftTree.style.height = "100%";
-    // }
-   
 
     woman.style.top = `${scrolled}px`; 
     woman.style.left = `${(scrolled * 4)}px`;
@@ -61,8 +52,11 @@ window.addEventListener("scroll", () => {
         (scrolled > 180) ? link.classList.add("active") : link.classList.remove("active");
         (scrolled > 180) ? mainNav.classList.add("active") : mainNav.classList.remove("active");
         (scrolled > 750) ? mainNav.style.boxShadow = "0 1px 5px rgba(100,100,100,0.4)" : mainNav.style.boxShadow = "0 0 0";
+        (scrolled > 900) ? mainNav.classList.add("active2") : mainNav.classList.remove("active2");
+
     })
 
  
 })
+
 
