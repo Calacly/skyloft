@@ -1,3 +1,5 @@
+/******************* CSS RESET & default settings */
+
 * {
     margin: 0;
     padding: 0;
@@ -5,11 +7,44 @@
 }
 
 
+body {
+    line-height: 1.8;
+    font-family: roboto;
+    color: black;
+    font-weight: 900;
+}
+
+/*********************** CSS VARIABLES */
+
 :root {
     --clr-light: #fff;
     --clr-dark: #333;
     --clr-blue: #6C94C9;
+    --clr-accent: #596c2d;
+    --clr-wood: #8e624d;
+    --image-shadow: 0 .2rem .3rem #333;
 }
+
+
+/********************** GENERAL STYLES */
+
+ h2 {
+    margin-bottom: 70px;
+    font-family: adumu;
+    font-size: 2.6em;
+    color: var(--clr-accent);
+    text-align: center;
+  }
+  h2:not(:first-child) {
+    padding-top: 60px;
+  }
+
+  p {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+  }
+
+/******************** LANDING SCREEN SECTION START */
 
 .top-anchor {
     visibility: hidden;
@@ -19,8 +54,7 @@
 
 .buffer {
     width: 100%;
-    height: calc(10vh + 20px);
-    background: red;
+    height: 110px;
 }
 
 .top-section {
@@ -60,17 +94,14 @@
 }
 
 
-
-
-
-
 .heading__main {
     position: fixed;
     top: 65vh;
     text-align: center;
     font-family: roboto;
     font-size: 12rem;
-    font-size: clamp(4rem, 20vw, 14rem);
+    font-weight: 900;
+    font-size: clamp(2rem, 20vw, 14rem);
     color: var(--clr-blue);
     line-height: .9;
     letter-spacing: 10px;
@@ -130,10 +161,6 @@
 }
 
 
-
-
-
-
 .left-tree, .right-tree, .woman {
     position: absolute;
 }
@@ -160,13 +187,10 @@
 }
 
 
- 
-
-
 .main-nav {
     display: grid;
     grid-template-areas: "logo links";
-    padding: 30px;
+    padding: 10px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -179,6 +203,11 @@
     background: rgba(255,255,255,.8);
     transform: translateY(0px);
 }
+.main-nav.active2 {
+    background: rgba(255,255,255,1);
+    
+}
+
 
 .logo {
     grid-area: logo;
@@ -187,9 +216,6 @@
 }
 
 .logo a {
-
-
-
     text-decoration: none;
     color: blue;
 } 
@@ -199,6 +225,7 @@
     list-style: none;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .nav-link {
@@ -207,7 +234,8 @@
 
 .btn__termine a {
     text-decoration: none;
-    font-family: 'Chewy', cursive;
+    font-family: "roboto";
+    letter-spacing: 1px;
     font-size: 1.3rem;
     color: var(--clr-light);
     padding: .7rem 1.9rem;
@@ -218,7 +246,8 @@
 
 .nav-link a {
     text-decoration: none;
-    font-family: 'Chewy', cursive;
+    font-family: "roboto";
+    letter-spacing: 1px;
     font-size: 1.3rem;
     color: var(--clr-light);
 }
@@ -242,7 +271,6 @@
     top: 0;
     left: 0;
     z-index: -2;
-    
     position: fixed;
     height: 60vh; 
 }
@@ -276,6 +304,10 @@
     }
 }
 
+/**************** X X  LANDING SCREEN SECTION END ********* X X *********/
+
+/** MAIN SECTIONS WRAPPER **/
+
 main.wrapper {
     position: relative;
     top: 100vh;
@@ -291,23 +323,209 @@ main.wrapper::before {
     top: -20px;
 }
 
+/************************* START SECTION - START */
+
 .start-section {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background: var(--clr-light);
     z-index: 2;
     margin-top: 10vh;
 }
 
+.start-section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    bottom: 0;
+    left: 0;
+    background-image: url(images/park-images/log-1200.png);
+    background-size: cover;
+    opacity: .4;
+}
+
+
+ .start-section .grid-wrapper {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    
+} 
+
+ .start-section .content {
+    position: relative;
+    padding: 20px;
+    
+}
+
+
+.start-section .content p::first-letter {
+    color: var(--clr-wood);
+    float: left;
+    font-size: 75px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+}
+
+.start-section .showcase {
+    position: relative;
+    padding: 20px 20px 0 20px;
+}
+
+.showcase h2 {
+    position: relative;
+    margin-bottom: 40px;
+    font-family: roboto;
+    color: #fff;
+    font-weight: 900;
+    font-size: 1.8em;
+    font-size: clamp(1em, 3vw, 3em);
+    
+}
+
+.showcase h2 span:first-child {
+    position: absolute;
+    top: 270px;
+    left: 0px;
+    z-index: 50;
+    padding: 10px;
+    background: var(--clr-accent);
+    opacity: .7;
+}
+.showcase h2 span:last-child {
+    position: absolute;
+    top: 1000px;
+    left: -650px;
+    z-index: 50;
+    padding: 10px;
+    background: var(--clr-accent);
+    opacity: .7;
+}
+
+.showcase .images {
+    position: relative;
+    min-height: 100vh;
+    
+}
+.showcase .holder {
+    width: 55%;
+    position: absolute;
+    
+}
+
+.showcase img {
+    width: 100%;
+    height: auto;  
+    
+} 
+
+.carousel-inner {
+    box-shadow: var(--image-shadow);
+}
+
+
+
+
+
+/********************* X X *********** START SECTION - END ****** X X */
+
+
+/************************** ANGEBOTE SECTION - START */
 
 .angebote-section {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background: var(--clr-light);
     z-index: 2;
 }
+
+.angebote-section .autumn-leaf {
+    position: absolute;
+    width: 230px;
+    z-index: -1;
+    opacity: .5;
+}
+
+.angebote-section .autumn-leaf2 {
+    position: absolute;
+    width: 200px;
+    right: 180px;
+    z-index: -1;
+    top: -50px;
+    opacity: .5;
+}
+
+.angebote-section .autumn-leaf3 {
+    position: absolute;
+    width: 150px;
+    top: 700px;
+    right: 20%;
+    z-index: -1;
+    opacity: .5;
+}
+
+.angebote-section .autumn-leaf4 {
+    position: absolute;
+    width: 250px;
+    bottom: 900px;
+    left: 0;
+    z-index: -1;
+    opacity: .4;
+}
+
+.angebote-section .flex-wrapper .content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    
+}
+
+.angebote-section p {
+    grid-column: span 2;
+    padding: 0px 20px 20px 20px;
+}
+
+
+.angebote-section figure {
+    margin: 0 auto;
+    width: 90%;
+    height: 400px;
+    grid-column: span 3;
+    box-shadow: var(--image-shadow);
+    overflow: hidden;
+}
+
+.angebote-section figure img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;  
+    transition: transform .5s ease;
+}
+
+.angebote-section figure img:hover {
+    transform: scale(1.05); 
+}
+
+.angebote-section .image-1 {
+    position: relative;
+    order: -1;
+}
+
+
+.angebote-section .image-3 {
+    order: -1;
+}
+
+
+
+
+/********************* X X *********** ANGEBOTE SECTION - END ****** X X */
+
+
+/************************** TOUREN SECTION - START */
 
 .touren-section {
     position: relative;
@@ -317,6 +535,15 @@ main.wrapper::before {
     z-index: 2;
 }
 
+
+
+
+/********************* X X *********** TOUREN SECTION - END ****** X X */
+
+
+
+/************************** PREISE SECTION - START */
+
 .preise-zeiten-section {
     position: relative;
     height: 100vh;
@@ -325,3 +552,6 @@ main.wrapper::before {
     z-index: 2;
 }
 
+
+
+/********************* X X *********** PREISE SECTION - END ****** X X */
