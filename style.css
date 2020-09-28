@@ -1,6 +1,9 @@
+/*  Style imports */
+@import "./form.css";
+
 /******************* CSS RESET & default settings */
 
-* {
+*, ::before, ::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,6 +15,7 @@ body {
     font-family: roboto;
     color: black;
     font-weight: 900;
+    overflow-x: hidden;
 }
 
 /*********************** CSS VARIABLES */
@@ -28,20 +32,23 @@ body {
 
 /********************** GENERAL STYLES */
 
- h2 {
-    margin-bottom: 70px;
+ main h2 {
+    margin-bottom: 100px;
     font-family: adumu;
     font-size: 2.6em;
     color: var(--clr-accent);
     text-align: center;
+    text-transform: uppercase;
+    padding: 20px 0;
   }
   h2:not(:first-child) {
-    padding-top: 60px;
+    margin-top: 100px;
   }
 
   p {
     font-size: 1.2em;
     letter-spacing: 1px;
+    margin-bottom: 0;
   }
 
 /******************** LANDING SCREEN SECTION START */
@@ -230,13 +237,14 @@ body {
 
 .nav-link {
     position: relative;
+    cursor: pointer;
 }
 
 .btn__termine a {
     text-decoration: none;
     font-family: "roboto";
     letter-spacing: 1px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: var(--clr-light);
     padding: .7rem 1.9rem;
     transform: translateY(-.7rem);
@@ -248,7 +256,7 @@ body {
     text-decoration: none;
     font-family: "roboto";
     letter-spacing: 1px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: var(--clr-light);
 }
 
@@ -356,7 +364,6 @@ main.wrapper::before {
  .start-section .content {
     position: relative;
     padding: 20px;
-    
 }
 
 
@@ -375,18 +382,50 @@ main.wrapper::before {
     padding: 20px 20px 0 20px;
 }
 
-.showcase h2 {
-    position: relative;
+.start-section .pop-up-tag span {
+    position: absolute;
     margin-bottom: 40px;
+    padding: 10px;
     font-family: roboto;
     color: #fff;
+    background: var(--clr-accent);
     font-weight: 900;
     font-size: 1.8em;
-    font-size: clamp(1em, 3vw, 3em);
-    
+    opacity: .7;
+    z-index: 100;
+    font-size: clamp(1em, 3vw, 3em);  
 }
 
-.showcase h2 span:first-child {
+.content .pop-up-tag span {
+    bottom: -600px;
+    left: 30px;
+}
+
+.showcase .pop-up-tag span {
+    top: 300px;
+    left: 20px;
+}
+
+
+.showcase img {
+    width: 100%;
+    height: auto;    
+} 
+
+.carousel-inner {
+    box-shadow: var(--image-shadow);
+}
+
+
+
+/* Start Section Media Queries */
+
+@media (max-width: 1200px) {
+   .start-section .grid-wrapper {
+       display: block;
+   }
+
+   .showcase h2 span:first-child {
     position: absolute;
     top: 270px;
     left: 0px;
@@ -395,38 +434,30 @@ main.wrapper::before {
     background: var(--clr-accent);
     opacity: .7;
 }
+
+.showcase {
+    width: 90%;
+    margin: 0 auto;
+}
+
 .showcase h2 span:last-child {
     position: absolute;
     top: 1000px;
-    left: -650px;
+    left: 0;
     z-index: 50;
     padding: 10px;
     background: var(--clr-accent);
     opacity: .7;
 }
 
-.showcase .images {
-    position: relative;
-    min-height: 100vh;
-    
-}
-.showcase .holder {
-    width: 55%;
-    position: absolute;
-    
-}
-
-.showcase img {
+.start-section::before {
     width: 100%;
-    height: auto;  
-    
-} 
-
-.carousel-inner {
-    box-shadow: var(--image-shadow);
+    height: 50%;
+    bottom: 200px;
+    left: 0;
 }
 
-
+}
 
 
 
@@ -446,6 +477,7 @@ main.wrapper::before {
 .angebote-section .autumn-leaf {
     position: absolute;
     width: 230px;
+    bottom:  310px;
     z-index: -1;
     opacity: .5;
 }
@@ -479,19 +511,18 @@ main.wrapper::before {
 
 .angebote-section .flex-wrapper .content {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    
+    grid-template-columns: repeat(5, 1fr);   
 }
 
 .angebote-section p {
     grid-column: span 2;
-    padding: 0px 20px 20px 20px;
+    padding: 0 20px;
 }
 
 
 .angebote-section figure {
     margin: 0 auto;
-    width: 90%;
+    width: 93%;
     height: 400px;
     grid-column: span 3;
     box-shadow: var(--image-shadow);
@@ -500,9 +531,10 @@ main.wrapper::before {
 
 .angebote-section figure img {
     width: 100%;
-    max-height: 100%;
+    height: 100%;
     object-fit: cover;  
     transition: transform .5s ease;
+ 
 }
 
 .angebote-section figure img:hover {
@@ -519,7 +551,16 @@ main.wrapper::before {
     order: -1;
 }
 
+@media (max-width: 1200px) {
+    .angebote-section .flex-wrapper .content {
+       display: block;  
+    }
 
+    .angebote-section p {
+        padding-bottom: 40px;
+    }
+
+}
 
 
 /********************* X X *********** ANGEBOTE SECTION - END ****** X X */
