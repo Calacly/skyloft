@@ -15,7 +15,7 @@ $("body a").on("click", function(e) {
             duration = 800;
         }
 
-
+//the property "top" after offset is throwing an error, however without it the animate scroll breaks.
         $("html, body").animate({
             scrollTop: $(hash).offset().top
         }, duration);
@@ -29,6 +29,7 @@ const woman = document.querySelector('#woman');
 
 const mainNav = document.querySelector(".main-nav");
 const navLink = document.querySelectorAll(".nav-link");
+
 
 
 
@@ -59,4 +60,27 @@ window.addEventListener("scroll", () => {
  
 })
 
+//form popup
+const form = document.querySelector("#form")
+const contactLink = document.querySelector("#contact");
+
+contact.addEventListener("click", (e) => {
+    e.preventDefault();
+    form.classList.toggle("active");
+   
+})
+
+
+// form animation
+const submitBtn = document.querySelector("#submitBtn");
+
+
+submitBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+    submitBtn.classList.add("active");
+
+    // setTimeout(() => {
+    //     submitBtn.classList.remove("active");
+    // }, 2000)
+})
 
