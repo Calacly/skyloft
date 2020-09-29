@@ -18,6 +18,7 @@
     <!-- ********************************* CONTACT FORM -->
 
 <div id="form" class="form-container">
+  <div class="exit-form">&#10005;</div>
   <div class="form-contact-info">
     <div>
       <h2>Kontakt</h2>
@@ -48,7 +49,7 @@
   </div>
   <div class="contact-form">
     <h2>Kontakieren Sie uns</h2>
-    <div class="form-box">
+    <form class="form-box" method="POST" action="contact-form-handler.php">
       <div class="input-box w50">
         <input type="text" name="" required>
         <span>Vorname</span>
@@ -73,7 +74,7 @@
         <input id="submitBtn" type="submit" value="ABSENDEN">
         <i class="far fa-paper-plane"></i>
       </div>
-    </div>
+    </form>
   </div>
 </div>
 

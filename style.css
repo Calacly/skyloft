@@ -51,6 +51,7 @@ body {
     margin-bottom: 0;
   }
 
+
 /******************** LANDING SCREEN SECTION START */
 
 .top-anchor {
@@ -238,7 +239,10 @@ body {
 .nav-link {
     position: relative;
     cursor: pointer;
+   
 }
+
+
 
 .btn__termine a {
     text-decoration: none;
@@ -258,6 +262,7 @@ body {
     letter-spacing: 1px;
     font-size: 1.1rem;
     color: var(--clr-light);
+    cursor: pointer;
 }
 
 .nav-link:hover a::after {
@@ -455,6 +460,10 @@ main.wrapper::before {
     height: 50%;
     bottom: 200px;
     left: 0;
+}
+
+.nav-links {
+    display: none;
 }
 
 }
