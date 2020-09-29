@@ -62,12 +62,16 @@ window.addEventListener("scroll", () => {
 
 //form popup
 const form = document.querySelector("#form")
-const contactLink = document.querySelector("#contact");
+const contact = document.querySelector("#contact");
+const exitForm = document.querySelector(".exit-form");
 
 contact.addEventListener("click", (e) => {
     e.preventDefault();
     form.classList.toggle("active");
-   
+    
+})
+exitForm.addEventListener("click", () => {
+    form.classList.remove("active");
 })
 
 
@@ -79,8 +83,7 @@ submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
     submitBtn.classList.add("active");
 
-    // setTimeout(() => {
-    //     submitBtn.classList.remove("active");
-    // }, 2000)
+    e.submit();
+
 })
 
