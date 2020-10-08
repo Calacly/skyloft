@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 24.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="obj" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 2500 384" style="enable-background:new 0 0 2500 384;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#3FA9F5;}
-	.st1{fill:none;stroke:#000000;stroke-width:5;stroke-miterlimit:10;}
-</style>
-<rect id="sky" class="st0" width="2500" height="384"/>
-<g id="line">
-	<line class="st1" x1="0" y1="0" x2="2500" y2="382.5"/>
-</g>
-</svg>
+<svg enable-background="new 0 0 2500 384" viewBox="0 0 2500 384" xmlns="http://www.w3.org/2000/svg"><path d="m0 0h2500v384h-2500z" fill="#3fa9f5"/><path d="m0 0 2500 382.5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="5"/></svg>

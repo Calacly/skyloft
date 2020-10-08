@@ -317,6 +317,21 @@ body {
     }
 }
 
+
+/* Landing section Media Queries */
+
+/* Hamburger menu */
+/* @media (max-width: 1200px) {
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 0;
+    }
+} */
+
+
+
 /**************** X X  LANDING SCREEN SECTION END ********* X X *********/
 
 /** MAIN SECTIONS WRAPPER **/
@@ -460,10 +475,6 @@ main.wrapper::before {
     height: 50%;
     bottom: 200px;
     left: 0;
-}
-
-.nav-links {
-    display: none;
 }
 
 }
