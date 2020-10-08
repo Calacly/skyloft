@@ -81,7 +81,7 @@ const submitBtn = document.querySelector("#submitBtn");
 
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
-    submitBtn.classList.add("active");
+    submitBtn.classList.toggle("active");
 
     e.submit();
 
