@@ -15,7 +15,6 @@ $("body a").on("click", function(e) {
             duration = 800;
         }
 
-//the property "top" after offset is throwing an error, however without it the animate scroll breaks.
         $("html, body").animate({
             scrollTop: $(hash).offset().top
         }, duration);
